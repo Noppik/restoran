@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div(class='wrap')
+    h1(class='title3') Cтол номер #{stol.number}
+    if (stol.booked)
+        p(class='stol-info3') Забронирован на имя: #{name}
+        p(class='stol-info3') Скажите номер столика и имя на входе
+        p(class='stol-info3') Приятного время провождения в нашем итальянском ресторане #[em Бахтиярро]
+    else
+        p(class='stol-info2') Свободен

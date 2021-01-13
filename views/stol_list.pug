@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1(class='title2') Наши столы
+
+  ul(class='stols')
+    each stol in stol_list
+        if (!stol.booked)
+            li(class='stol', onclick="location.href='" + stol.url + "';")
+                p(class='stol-number') #{stol.number}
+        else
+            li(class='stol-gray', onclick="location.href='" + stol.url + "';")
+                p(class='stol-number') #{stol.number}

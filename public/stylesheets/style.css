@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+  padding: 50px;
+  font: 20px "Lucida Grande", Helvetica, Arial, cursive;
+  background-image: url(../images/back.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: whitesmoke;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.stols {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-left: -50px;
+}
+
+.stol {
+  list-style-type: none;
+  background-color: whitesmoke;
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+  color: #000;
+  cursor: pointer;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stol-gray {
+  background-color: gray;
+  list-style-type: none;
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+  color: #000;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.stol-number {
+  margin: 0;
+}
+
+.title2 {
+  color: whitesmoke;
+  margin-left: calc(50% - 160px);
+  margin-bottom: 0;
+}
+
+.title3 {
+  color: whitesmoke;
+  margin-left: calc(50% - 140px);
+  margin-bottom: 0;
+}
+
+.stol-info {
+  margin-left: calc(50% - 90px);
+}
+
+.stol-info2 {
+  margin-left: calc(50% - 60px);
+}
+
+.stol-info3 {
+  text-align: center;
+}
+
+.col-sm-2 {
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.col-sm-10 {
+  margin-top: calc(50% - 400px);
+  width: 500px;
+  margin-left: calc(50% - 250px);
+}
+
+.title {
+  /*font-family: 'Dancing Script', cursive;*/
+  font-family: "Great Vibes", cursive;
+  font-size: 100px;
+  color: whitesmoke;
+  margin-left: calc(50% - 270px);
+  margin-bottom: 0;
+}
+
+.button {
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  border: solid rgb(219, 219, 219);
+  margin-left: calc(50% - 130px);
+  background-color: whitesmoke;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.button:hover {
+  background-color: lightgray;
+}
+
+.client-name {
+  width: 250px;
+  height: 40px;
+  margin-left: calc(50% - 130px);
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "Lucida Grande", Helvetica, Arial, cursive;
+  background-color: whitesmoke;
+  border: solid rgb(231, 230, 230);
+  border-radius: 50px;
+  text-align: center;
+}
+
+.client-name:hover {
+  border: solid rgb(187, 187, 187);
+}
+
+.client-data {
+  width: 250px;
+  height: 40px;
+  margin-left: calc(50% - 130px);
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "Lucida Grande", Helvetica, Arial, cursive;
+  background-color: whitesmoke;
+  border: solid rgb(231, 230, 230);
+  border-radius: 50px;
+  text-align: center;
+}
+
+.client-data:hover {
+  border: solid rgb(187, 187, 187);
+}
+
+.wrap {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+@media screen and (max-width: 1200px) {
+  body { 
+    background-size: 110%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  body { 
+    background-size: 120%;
+  }
+}

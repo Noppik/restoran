@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1(class='title3') Cтол номер #{stol.number}
+  if (stol.booked)
+    p(class='stol-info') Забронирован
+  else
+    p(class='stol-info2') Свободен
+    input(class='client-name', type='text', placeholder="Ваше имя на бронь", id='elem1')
+    div(class='button', onclick="location.href = '" + stol.url + "' + '/booked/' + document.getElementById('elem1').value") Забронировать стол
