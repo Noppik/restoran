@@ -6,7 +6,10 @@ var StolSchema = new Schema(
   {
     number: {type: Number, required: true},
     booked: {type: Boolean, required: true},
-    dataBooked: {type: Date, required: true}
+    dataBooked: {type: Date, required: true},
+    yesterday: {type: Array, required: true},
+    today: {type: Array, required: true},
+    tomorrow: {type: Array, required: true}
   }
 );
 

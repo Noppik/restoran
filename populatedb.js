@@ -24,11 +24,14 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 var stols = []
 
 
-function stolCreate(number, booked, dataBooked, cb) {
+function stolCreate(number, booked, dataBooked, yesterday, today, tomorrow, cb) {
   stoldetail = { 
     number: number,
     booked: booked,
-    dataBooked: dataBooked
+    dataBooked: dataBooked,
+    yesterday: yesterday,
+    today: today,
+    tomorrow: tomorrow
   }    
     
   var stol = new Stol(stoldetail);    
@@ -49,37 +52,34 @@ function stolCreate(number, booked, dataBooked, cb) {
 function createStols(cb) {
     async.parallel([
         function(callback) {
-            stolCreate(1, false, Date.now(), callback)
+            stolCreate(1, false, Date.now(), [false, false, false], [false, false, false], [false, false, false], callback)
         },
         function(callback) {
-            stolCreate(2, false, Date.now(), callback)
+            stolCreate(2, false, Date.now(), [false, false, false], [false, false, false], [false, false, false], callback)
         },
         function(callback) {
-            stolCreate(3, false, Date.now(), callback)
+            stolCreate(3, false, Date.now(), [false, false, false], [false, false, false], [false, false, false], callback)
         },
         function(callback) {
-            stolCreate(4, false, Date.now(), callback)
+            stolCreate(4, false, Date.now(), [false, false, false], [false, false, false], [false, false, false], callback)
         },
         function(callback) {
-            stolCreate(5, false, Date.now(), callback)
+            stolCreate(5, false, Date.now(), [false, false, false], [false, false, false], [false, false, false], callback)
         },
         function(callback) {
-            stolCreate(6, false, Date.now(), callback)
+            stolCreate(6, false, Date.now(), [false, false, false], [false, false, false], [false, false, false], callback)
         },
         function(callback) {
-            stolCreate(7, false, Date.now(), callback)
+            stolCreate(7, false, Date.now(), [false, false, false], [false, false, false], [false, false, false], callback)
         },
         function(callback) {
-            stolCreate(8, false, Date.now(), callback)
+            stolCreate(8, false, Date.now(), [false, false, false], [false, false, false], [false, false, false], callback)
         },
         function(callback) {
-            stolCreate(9, false, Date.now(), callback)
+            stolCreate(9, false, Date.now(), [false, false, false], [false, false, false], [false, false, false], callback)
         },
         function(callback) {
-            stolCreate(10, false, Date.now(), callback)
-        },
-        function(callback) {
-            stolCreate(11, false, Date.now(), callback)
+            stolCreate(10, false, Date.now(), [false, false, false], [false, false, false], [false, false, false], callback)
         }
         ],
         // Optional callback

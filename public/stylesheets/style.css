@@ -36,16 +36,7 @@ a {
 
 .stol-gray {
   background-color: gray;
-  list-style-type: none;
-  width: 100px;
-  height: 40px;
-  margin-left: 10px;
-  color: #000;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  cursor: alias;
 }
 
 .stol-number {
@@ -55,7 +46,7 @@ a {
 .title2 {
   color: whitesmoke;
   margin-left: calc(50% - 160px);
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .title3 {
@@ -74,6 +65,18 @@ a {
 
 .stol-info3 {
   text-align: center;
+}
+
+.stol-info4 {
+  margin-left: calc(50% - 46px);
+}
+
+.stol-info5 {
+  margin-left: calc(50% - 46px);
+}
+
+.stol-info6 {
+  margin-left: calc(50% - 72px);
 }
 
 .col-sm-2 {
@@ -162,6 +165,187 @@ a {
   position: absolute;
   top: 25%;
   left: 25%;
+}
+
+.dates1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.dates2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.dates3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.dates-text {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  font-family: "Lucida Grande", Helvetica, Arial, cursive;
+  background-color: whitesmoke;
+  border: solid rgb(231, 230, 230);
+  border-radius: 50px;
+  text-align: center;
+  color: #000;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.times-text {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  font-family: "Lucida Grande", Helvetica, Arial, cursive;
+  background-color: whitesmoke;
+  border: solid rgb(231, 230, 230);
+  border-radius: 50px;
+  text-align: center;
+  color: #000;
+  margin-left: 10px;
+  margin-top: 100px;
+}
+
+.times-text:hover {
+  border: solid rgb(187, 187, 187);
+}
+
+.dates-text:hover {
+  border: solid rgb(187, 187, 187);
+}
+
+#y:checked ~ .dates-text:nth-of-type(1) {
+  background-color: green;
+}
+
+#t:checked ~ .dates-text:nth-of-type(2) {
+  background-color: green;
+}
+
+#to:checked ~ .dates-text:nth-of-type(3) {
+  background-color: green;
+}
+
+#a:checked ~ .times-text:nth-of-type(4) {
+  background-color: green;
+}
+
+#b:checked ~ .times-text:nth-of-type(5) {
+  background-color: green;
+}
+
+#c:checked ~ .times-text:nth-of-type(6) {
+  background-color: green;
+}
+
+.dates1 {
+  display: none;
+  margin-top: 65px;
+  margin-left: -70px;
+}
+
+.dates2 {
+  display: none;
+  margin-top: 65px;
+  margin-left: -70px;
+}
+
+.dates3 {
+  display: none;
+  margin-top: 65px;
+  margin-left: -70px;
+}
+
+#y:checked ~ .dates1 {
+  display: flex;
+}
+
+#t:checked ~ .dates2 {
+  display: flex;
+}
+
+#to:checked ~ .dates3 {
+  display: flex;
+}
+
+.stol {
+  display: none;
+}
+
+#a:checked ~ .dates1 .stol:nth-of-type(3n-2) {
+  display: flex;
+}
+
+#a:checked ~ .dates2 .stol:nth-of-type(3n-2) {
+  display: flex;
+}
+
+#a:checked ~ .dates3 .stol:nth-of-type(3n-2) {
+  display: flex;
+}
+
+#b:checked ~ .dates1 .stol:nth-of-type(3n-1) {
+  display: flex;
+}
+
+#b:checked ~ .dates2 .stol:nth-of-type(3n-1) {
+  display: flex;
+}
+
+#b:checked ~ .dates3 .stol:nth-of-type(3n-1) {
+  display: flex;
+}
+
+#c:checked ~ .dates1 .stol:nth-of-type(3n) {
+  display: flex;
+}
+
+#c:checked ~ .dates2 .stol:nth-of-type(3n) {
+  display: flex;
+}
+
+#c:checked ~ .dates3 .stol:nth-of-type(3n) {
+  display: flex;
+}
+
+.dates-text:nth-of-type(1) {
+  margin-left: 60px;
+}
+
+.times-text:nth-of-type(4) {
+  position: absolute;
+  width: 80px;
+  height: 25px;
+  left: calc(50% - 170px);
+  top: calc(50% - 105px);
+}
+
+.times-text:nth-of-type(5) {
+  position: absolute;
+  width: 80px;
+  height: 25px;
+  left: calc(50% - 80px);
+  top: calc(50% - 105px);
+}
+
+.times-text:nth-of-type(6) {
+  position: absolute;
+  width: 80px;
+  height: 25px;
+  left: calc(50% + 10px);
+  top: calc(50% - 105px);
+}
+
+.dates {
+  display: none;
+}
+
+.times {
+  display: none;
 }
 
 @media screen and (max-width: 1200px) {

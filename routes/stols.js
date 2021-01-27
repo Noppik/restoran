@@ -12,7 +12,7 @@ var stol_controller = require('../controllers/stolController');
 // GET request for list of all BookInstance.
 router.get('/', stol_controller.index)
 router.get('/stols', stol_controller.stol_list);
-router.get('/stols/:id', stol_controller.stol_detail);
-router.get('/stols/:id/booked/:name', stol_controller.stol_detail_booked);
+router.get('/stols/:id/:data/:time', stol_controller.stol_detail);
+router.get('/stols/:id/:data/:time/booked/:name', stol_controller.stol_detail_booked);
 
 module.exports = router;
