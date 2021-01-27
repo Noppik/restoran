@@ -1,0 +1,80 @@
+extends layout
+
+block content
+  h1(class='title2') Наши столы
+  
+  input(class='dates', type='radio', name='dates', id='y')
+  label(class='dates-text', for='y') Сегодня
+  input(class='dates', type='radio', name='dates', id='t')
+  label(class='dates-text', for='t') Завтра
+  input(class='dates', type='radio', name='dates', id='to')
+  label(class='dates-text', for='to') Послезавтра
+  input(class='times', type='radio', name='times', id='a')
+  label(for="a", class='times-text') 13:00
+  input(class='times', type='radio', name='times', id='b')
+  label(for="b", class='times-text') 16:00
+  input(class='times', type='radio', name='times', id='c')
+  label(for="c", class='times-text') 19:00
+
+  ul(class='dates1')
+    each stol in stol_list
+        if (!stol.yesterday[0])
+            li(class='stol', onclick="location.href='" + stol.url + '/1/1' + "';")
+                p(class='stol-number') #{stol.number}
+        else
+            li(class='stol stol-gray')
+                p(class='stol-number') #{stol.number}
+        if (!stol.yesterday[1])
+            li(class='stol', onclick="location.href='" + stol.url + '/1/2' + "';")
+                p(class='stol-number') #{stol.number}
+        else
+            li(class='stol stol-gray')
+                p(class='stol-number') #{stol.number}
+        if (!stol.yesterday[2])
+            li(class='stol', onclick="location.href='" + stol.url + '/1/3' + "';")
+                p(class='stol-number') #{stol.number}
+        else
+            li(class='stol stol-gray')
+                p(class='stol-number') #{stol.number}
+
+  ul(class='dates2')
+    each stol in stol_list
+        if (!stol.today[0])
+            li(class='stol', onclick="location.href='" + stol.url + '/2/1' + "';")
+                p(class='stol-number') #{stol.number}
+        else
+            li(class='stol stol-gray')
+                p(class='stol-number') #{stol.number}
+        if (!stol.today[1])
+            li(class='stol', onclick="location.href='" + stol.url + '/2/2' + "';")
+                p(class='stol-number') #{stol.number}
+        else
+            li(class='stol stol-gray')
+                p(class='stol-number') #{stol.number}
+        if (!stol.today[2])
+            li(class='stol', onclick="location.href='" + stol.url + '/2/3' + "';")
+                p(class='stol-number') #{stol.number}
+        else
+            li(class='stol stol-gray')
+                p(class='stol-number') #{stol.number}
+
+  ul(class='dates3')
+    each stol in stol_list
+        if (!stol.tomorrow[0])
+            li(class='stol', onclick="location.href='" + stol.url + '/3/1' + "';")
+                p(class='stol-number') #{stol.number}
+        else
+            li(class='stol stol-gray')
+                p(class='stol-number') #{stol.number}
+        if (!stol.tomorrow[1])
+            li(class='stol', onclick="location.href='" + stol.url + '/3/2' + "';")
+                p(class='stol-number') #{stol.number}
+        else
+            li(class='stol stol-gray')
+                p(class='stol-number') #{stol.number}
+        if (!stol.tomorrow[2])
+            li(class='stol', onclick="location.href='" + stol.url + '/3/3' + "';")
+                p(class='stol-number') #{stol.number}
+        else
+            li(class='stol stol-gray')
+                p(class='stol-number') #{stol.number}

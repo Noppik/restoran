@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div(class='wrap')
+    h1(class='title3') Cтол номер #{stol.number}
+    p(class='stol-info3') Забронирован на имя: #{name}
+    if (data == 1)
+      p(class='stol-info2') Сегодня 
+    if (data == 2)
+      p(class='stol-info5') Завтра 
+    if (data == 3)
+      p(class='stol-info6') Послезавтра 
+    if (time == 1)
+      p(class='stol-info4') 13:00 
+    if (time == 2)
+      p(class='stol-info4') 16:00 
+    if (time == 3)
+      p(class='stol-info4') 19:00 
+    p(class='stol-info3') Скажите номер столика и имя на входе
+    p(class='stol-info3') Приятного время провождения в нашем итальянском ресторане #[em Бахтиярро]
